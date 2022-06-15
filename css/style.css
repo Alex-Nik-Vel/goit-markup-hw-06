@@ -243,7 +243,6 @@ p {
   width: 18px;
   height: 18px;
   fill: currentColor;
-  /* fill: #212121; */
 }
 .modal-close:hover,
 .modal-close:focus {
@@ -260,7 +259,6 @@ p {
   position: relative;
   display: flex;
   margin: 0;
-  /* padding: 14px 15px; */
   flex-direction: column;
   margin-bottom: 10px;
   font-size: 12px;
@@ -275,8 +273,8 @@ p {
   text-align: center;
   color: #212121;
 }
-.modal-form input,
-.modal-form textarea {
+
+.form-textarea {
   margin-bottom: 10px;
   padding: 14px 15px;
   background: #ffffff;
@@ -286,14 +284,23 @@ p {
   cursor: pointer;
   transition: border 250ms var(--timing-fuction);
 }
-.form-input {
+.form-label {
   margin: 0;
   padding: 0;
   position: relative;
   display: flex;
 }
-.form-input input {
+.form-input {
+  display: flex;
   width: 100%;
+  margin-bottom: 10px;
+  padding: 14px 15px 14px 42px;
+  background: #ffffff;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  color: #757575;
+  cursor: pointer;
+  transition: border 250ms var(--timing-fuction);
 }
 .icon-form {
   margin: 0;
@@ -302,25 +309,42 @@ p {
   position: absolute;
   top: 50%;
   left: 15px;
-
   width: 12px;
   height: 12px;
   transform: translateY(-100%);
   fill: currentColor;
   color: var(--title-color);
+  cursor: pointer;
+  transition: color 250ms var(--timing-fuction);
 }
-.form-input input:hover,
-.form-input input:focus,
-.modal-form textarea:hover,
-.modal-form textarea:focus {
-  border: 1px solid var(--booton-color);
+.form-input:hover + .icon-form,
+.form-input:focus + .icon-form {
   color: var(--booton-color);
+}
+.form-input:hover,
+.form-input:focus {
+  border: 1px solid var(--booton-color);
+}
+
+.form-textarea:hover,
+.form-textarea:focus {
+  border: 1px solid var(--booton-color);
 }
 .modal-form label {
   margin-bottom: 4px;
 }
 .modal-field textarea {
   color: rgba(117, 117, 117, 0.5);
+}
+.checkbox-text {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: #757575;
+}
+.agree {
+  color: var(--booton-color);
 }
 .form-btn {
   margin-left: auto;

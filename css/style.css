@@ -546,7 +546,7 @@ p {
   overflow: hidden;
   margin: 0;
 }
-img {
+.do-img {
   display: block;
   max-width: 100%;
   height: auto;

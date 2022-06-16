@@ -254,6 +254,7 @@ p {
   margin-right: auto;
   padding: 40px;
   width: 528px;
+  outline: none;
 }
 .modal-field {
   position: relative;
@@ -282,7 +283,7 @@ p {
   border-radius: 4px;
   color: #757575;
   cursor: pointer;
-  transition: border 250ms var(--timing-fuction);
+  transition: outline 250ms var(--timing-fuction);
 }
 .form-label {
   margin: 0;
@@ -291,7 +292,7 @@ p {
   display: flex;
 }
 .form-input {
-  display: flex;
+  display: block;
   width: 100%;
   margin-bottom: 10px;
   padding: 14px 15px 14px 42px;
@@ -300,22 +301,23 @@ p {
   border-radius: 4px;
   color: #757575;
   cursor: pointer;
-  transition: border 250ms var(--timing-fuction);
+  transition: outline 250ms var(--timing-fuction);
 }
 .icon-form {
   margin: 0;
   padding: 0;
-  display: inline-block;
+  display: block;
   position: absolute;
   top: 50%;
   left: 15px;
-  width: 12px;
-  height: 12px;
-  transform: translateY(-100%);
+  width: 15px;
+  height: 15px;
+  transform: translateY(-90%);
   fill: currentColor;
   color: var(--title-color);
   cursor: pointer;
-  transition: color 250ms var(--timing-fuction);
+  transition: color 250ms var(--timing-fuction),
+    outline 250ms var(--timing-fuction);
 }
 .form-input:hover + .icon-form,
 .form-input:focus + .icon-form {
@@ -323,12 +325,12 @@ p {
 }
 .form-input:hover,
 .form-input:focus {
-  border: 1px solid var(--booton-color);
+  outline: 1px solid var(--booton-color);
 }
 
-.form-textarea:hover,
+/* .form-textarea:hover, */
 .form-textarea:focus {
-  border: 1px solid var(--booton-color);
+  outline: 1px solid var(--booton-color);
 }
 .modal-form label {
   margin-bottom: 4px;
@@ -336,12 +338,50 @@ p {
 .modal-field textarea {
   color: rgba(117, 117, 117, 0.5);
 }
+/* checkBox */
+.label-check
+{
+  display: contents;
+  justify-content: center;
+}
+.form-check{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+.icon-check {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 2%;
+  width: 15px;
+  height: 15px;
+  transform: translateY(-55%);
+  border: 2px solid var(--title-color);
+  border-radius: 2px;
+  transition: background-color 250ms var(--timing-fuction),
+  border 250ms var(--timing-fuction);
+}
+.form-check:not(checked) + .icon-check {
+  box-flex-group: #fff;
+  fill: #ffffff;
+}
+.form-check:checked + .icon-check {
+  background-color: var(--booton-color);
+  border: 2px solid var(--booton-color);
+  fill: #ffffff;
+  }
 .checkbox-text {
+  padding-left: 19px;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-
   color: #757575;
+  text-align: center;
 }
 .agree {
   color: var(--booton-color);
@@ -349,7 +389,8 @@ p {
 .form-btn {
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 40px;
+  margin-top: 30px;
+  margin-bottom: 0;
   padding: 10px 55px 10px 56px;
   font-size: 16px;
   line-height: 1.88;

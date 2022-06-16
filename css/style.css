@@ -241,8 +241,8 @@ p {
 }
 .mod-icon {
   align-items: center;
-  width: 18px;
-  height: 18px;
+  width: 11px;
+  height: 11px;
   fill: currentColor;
 }
 .modal-close:hover,
@@ -677,13 +677,18 @@ p {
   flex-wrap: wrap;
   align-content: space-between;
 }
+
 .portfolio .p-item {
   width: 370px;
   margin-right: 30px;
   margin-bottom: 30px;
   transition: box-shadow 250ms var(--timing-fuction);
 }
-
+.popup img{
+   display: block;
+ max-width: 100%;
+ height: auto;
+}
 .p-item:hover,
 .p-item:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
@@ -858,6 +863,7 @@ p {
   padding-left: 29px;
   background: var(--booton-color);
   color: #ffffff;
+  font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   display: flex;
